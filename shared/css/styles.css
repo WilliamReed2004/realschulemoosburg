@@ -1,0 +1,21 @@
+body {
+  padding-top: 0.5em;
+  padding-right: 0.5em;
+  background-color: whitesmoke;
+  color: #343a40;
+}
+
+.padding-0_5em {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+footer {
+  background-color: #343a40;
+  color: whitesmoke;
+}
+
+.red-text {
+  color: darkred;
+}
+/*# sourceMappingURL=styles.css.map */

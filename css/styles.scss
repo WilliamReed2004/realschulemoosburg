@@ -1,0 +1,269 @@
+// body {
+//     //padding-left    : 1em;
+//     padding-top       : 0.5em;
+//     //padding-bottom  : 1em;
+//     padding-right     : 0.5em;
+//     background-color  : whitesmoke;
+//     color             : #343a40;
+// }
+
+// .padding-0_5em {
+//     padding-left    : 0.5em;
+//     //padding-top   : 0.5em;
+//     //padding-bottom: 0.5em;
+//     padding-right   : 0.5em;
+// }
+
+
+// footer {
+//     background-color: #343a40;
+//     color           : whitesmoke;
+// }
+
+// .red-text {
+//     color: darkred;
+// } 
+
+// background-color: #F3EED9;
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #575757 #000000;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.backg-header {
+    background-color: #5daffe;
+}
+
+.header-content {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+@supports (backdrop-filter: blur()) or (-webkit-backdrop-filter: blur()) {
+    .header-content {
+        background-color       : rgba(255, 255, 255, 0.25) !important;
+        width                  : 100% !important;
+        height                 : 100% !important;
+        border-radius          : 1em !important;
+        backdrop-filter        : blur(1px) !important;
+        -webkit-backdrop-filter: blur(1px) !important;
+    }
+
+    .backg-header {
+        background-image     : url('../img/schule2.jpg') !important;
+        background-attachment: local !important;
+        background-position  : center center !important;
+        background-repeat    : no-repeat !important;
+        background-size      : cover !important;
+    }
+}
+
+.backg-light {
+
+    background-color: #5daffe !important;
+}
+
+.backg-dark {
+    background-color: #182d8a;
+    color           : whitesmoke;
+}
+
+.backg-accent {
+    background-color: #1c62c4;
+    color           : whitesmoke;
+}
+
+.bg-dark {
+    color: whitesmoke
+}
+
+header {
+    padding-top   : 4em;
+    padding-bottom: 4em;
+}
+
+
+section {
+    padding-top   : 0.5em;
+    padding-bottom: 2em;
+
+    img {
+        margin-top: 2em;
+        width     : 75%;
+    }
+
+    video {
+        margin-top: 2em;
+        width     : 75%;
+    }
+
+    .img-rassismus-small {
+        width: 75%;
+    }
+
+    .img-digitale-schule {
+        width: 60%;
+    }
+
+    h2 {
+        margin-top   : 1em;
+        margin-bottom: 0.5em;
+    }
+
+    h3 {
+        margin-top   : 1em;
+        margin-bottom: 0.25em;
+    }
+
+    .no-deco-links {
+        text-decoration: none;
+        color          : rgb(36, 36, 36) !important;
+
+        .no.deco-text {
+            text-decoration: none;
+            color          : rgb(36, 36, 36) !important;
+        }
+    }
+}
+
+footer {
+    padding-top   : 2.5em;
+    padding-bottom: 2.5em;
+    color         : whitesmoke !important;
+
+    a {
+        text-decoration: none;
+        color          : #3583f8;
+
+        :hover {
+            color: #336bc0;
+        }
+    }
+
+    p {
+        color: whitesmoke;
+    }
+}
+
+.dropdown-menu {
+    color: whitesmoke;
+}
+
+.dropdown-item {
+    color: whitesmoke;
+}
+
+.textc-dark {
+    color: rgb(36, 36, 36);
+}
+
+.textc-light {
+    color: whitesmoke;
+}
+
+.textc-smallheader {
+    color: inherit;
+}
+
+@supports (backdrop-filter: blur()) or (-webkit-backdrop-filter: blur()) {
+    .textc-smallheader {
+        color: #2b8ae2 !important;
+    }
+}
+
+.bg-darker {
+    background-color: rgb(36, 36, 36);
+    color           : whitesmoke;
+}
+
+.navbar-img {
+    width: 3.385em !important;
+}
+
+//.navbar-img-container {
+//    height: max-content;
+//}
+
+.mainpage-video {
+    width : 100% !important;
+    height: 20em;
+}
+
+@media only screen and (max-width: 1200px) {
+    .mainpage-video {
+        width : 100% !important;
+        height: 15em;
+    }
+}
+
+.mainpage-rundgang-img {
+    width: 75.5%;
+}
+
+.rundgang-container {
+    height: max-content;
+
+    div {
+        height: 100%;
+    }
+
+    img {
+        margin-top: auto !important;
+    }
+}
+
+.margin-top-1em {
+    margin-top: 1em;
+}
+
+.aktuell-img {
+    margin-top: 0em !important;
+    height    : 5em;
+    width     : auto;
+}
+
+@media only screen and (max-width: 770px) {
+    .aktuell-img {
+        height: 4em !important;
+        width : auto;
+    }
+}
+
+.p-no-margin-bottom {
+    margin-bottom: 0em !important;
+}
+
+.aktuell-container {
+    width: 100%
+}
+
+@media only screen and (max-width: 770px) {
+    .aktuell-container {
+        width: 50%;
+    }
+}
+
+.aktuell-toggler {
+    visibility: unset;
+}
+
+@media only screen and (min-width: 770px) {
+    .aktuell-toggler {
+        visibility: collapse !important;
+    }
+}
+
+#aktuell-collapse-1 {
+    visibility: visible;
+}
+
+.hr-no-margin {
+    margin-top   : 0.5em !important;
+    margin-right : 0em !important;
+    margin-bottom: 0.5em !important;
+    margin-left  : 0em !important;
+}
