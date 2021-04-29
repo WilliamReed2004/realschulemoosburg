@@ -1,23 +1,143 @@
+:root {
+  --bg-white: #F5F5F5;
+  --bg-accent-light: #6397CF;
+  --bg-accent-dark: #27488F;
+  --bg-accent: #316FB4;
+  --bg-dark: #1F1F1F;
+  --text-light: #F5F5F5;
+  --text-dark: #1F1F1F;
+  --text-links: #6397CF;
+  --text-links-hover: #316FB4;
+}
+
+.dark-mode {
+  --bg-white: #070C17;
+  --bg-accent-light: #2A517E;
+  --bg-accent: #1C3B5F;
+  --bg-accent-dark: #111F3B;
+  --bg-dark: #020407;
+  --text-light: #070C17;
+  --text-dark: #F5F5F5;
+  --text-links: #6397CF;
+  --text-links-hover: #316FB4;
+}
+
+a {
+  color: var(--text-links);
+}
+
+.backg-accent-light {
+  background-color: var(--bg-accent-light);
+}
+
+.backg-accent-dark {
+  background-color: var(--bg-accent-dark);
+  color: var(--text-light);
+}
+
+.backg-accent {
+  background-color: var(--bg-accent);
+  color: var(--text-light);
+}
+
+.backg-dark {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.backg-darker {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.text-dark {
+  color: var(--text-dark);
+}
+
 html {
-  scrollbar-width: thin;
-  scrollbar-color: #575757 #000000;
+  scrollbar-color: var(--text-light) var(--bg-dark);
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+}
+
+.no-deco-links {
+  text-decoration: none;
+  color: var(--text-dark) !important;
+}
+
+.no-deco-links .no.deco-text {
+  text-decoration: none;
+  color: var(--text-dark) !important;
+}
+
+.no-deco-links-light {
+  text-decoration: none;
+  color: var(--text-light) !important;
+}
+
+.no-deco-links-light .no.deco-text-light {
+  text-decoration: none;
+  color: var(--text-light) !important;
 }
 
 .backg-header {
-  background-color: #5daffe;
+  background-color: var(--bg-accent-light);
 }
 
 .header-content {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #00000000;
+}
+
+.dropdown-menu {
+  color: var(--text-light);
+}
+
+.dropdown-item {
+  color: var(--text-light);
+}
+
+.textc-dark {
+  color: var(--text-dark);
+}
+
+.textc-light {
+  color: var(--text-light);
+}
+
+.textc-smallheader {
+  color: inherit;
+}
+
+.textc-blue {
+  color: var(--text-links-hover) !important;
+}
+
+footer {
+  color: var(--text-light) !important;
+}
+
+footer a {
+  color: var(--text-links);
+}
+
+footer a :hover {
+  color: var(--text-links-hover);
+}
+
+footer p {
+  color: var(--text-light);
+}
+
+html {
+  scrollbar-width: thin;
 }
 
 @supports ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) or (-webkit-backdrop-filter: blur()) {
   .header-content {
-    background-color: rgba(255, 255, 255, 0.25) !important;
+    background-color: #ffffff40 !important;
     width: 100% !important;
     height: 100% !important;
     border-radius: 1em !important;
@@ -31,24 +151,6 @@ body {
     background-repeat: no-repeat !important;
     background-size: cover !important;
   }
-}
-
-.backg-light {
-  background-color: #5daffe !important;
-}
-
-.backg-dark {
-  background-color: #182d8a;
-  color: whitesmoke;
-}
-
-.backg-accent {
-  background-color: #1c62c4;
-  color: whitesmoke;
-}
-
-.bg-dark {
-  color: whitesmoke;
 }
 
 header {
@@ -89,64 +191,19 @@ section h3 {
   margin-bottom: 0.25em;
 }
 
-section .no-deco-links {
-  text-decoration: none;
-  color: #242424 !important;
-}
-
-section .no-deco-links .no.deco-text {
-  text-decoration: none;
-  color: #242424 !important;
-}
-
 footer {
   padding-top: 2.5em;
   padding-bottom: 2.5em;
-  color: whitesmoke !important;
 }
 
 footer a {
   text-decoration: none;
-  color: #3583f8;
-}
-
-footer a :hover {
-  color: #336bc0;
-}
-
-footer p {
-  color: whitesmoke;
-}
-
-.dropdown-menu {
-  color: whitesmoke;
-}
-
-.dropdown-item {
-  color: whitesmoke;
-}
-
-.textc-dark {
-  color: #242424;
-}
-
-.textc-light {
-  color: whitesmoke;
-}
-
-.textc-smallheader {
-  color: inherit;
 }
 
 @supports ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) or (-webkit-backdrop-filter: blur()) {
   .textc-smallheader {
-    color: #2b8ae2 !important;
+    color: gray !important;
   }
-}
-
-.bg-darker {
-  background-color: #242424;
-  color: whitesmoke;
 }
 
 .navbar-img {
@@ -233,5 +290,31 @@ footer p {
   margin-right: 0em !important;
   margin-bottom: 0.5em !important;
   margin-left: 0em !important;
+}
+
+.margin-small {
+  margin-top: 0.5em !important;
+  margin-right: 0em !important;
+  margin-bottom: 0em !important;
+  margin-left: 0em !important;
+}
+
+.margin-none {
+  margin-top: 0em !important;
+  margin-right: 0em !important;
+  margin-bottom: 0em !important;
+  margin-left: 0em !important;
+}
+
+.mainpage-liste {
+  background-color: #7878e180;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.padding-medium {
+  padding: 0.475em;
 }
 /*# sourceMappingURL=styles.css.map */

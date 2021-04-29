@@ -1,51 +1,172 @@
-// body {
-//     //padding-left    : 1em;
-//     padding-top       : 0.5em;
-//     //padding-bottom  : 1em;
-//     padding-right     : 0.5em;
-//     background-color  : whitesmoke;
-//     color             : #343a40;
-// }
+////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////// Vars /////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
 
-// .padding-0_5em {
-//     padding-left    : 0.5em;
-//     //padding-top   : 0.5em;
-//     //padding-bottom: 0.5em;
-//     padding-right   : 0.5em;
-// }
+:root {
+    --bg-white: #F5F5F5;
 
+    --bg-accent-light: #6397CF;
 
-// footer {
-//     background-color: #343a40;
-//     color           : whitesmoke;
-// }
+    --bg-accent-dark: #27488F;
 
-// .red-text {
-//     color: darkred;
-// } 
+    --bg-accent: #316FB4;
 
-// background-color: #F3EED9;
+    --bg-dark: #1F1F1F;
+
+    --text-light: #F5F5F5;
+
+    --text-dark: #1F1F1F;
+
+    --text-links: #6397CF;
+
+    --text-links-hover: #316FB4;
+}
+
+.dark-mode {
+    --bg-white: #070C17;
+
+    --bg-accent-light: #2A517E;
+
+    --bg-accent: #1C3B5F;
+
+    --bg-accent-dark: #111F3B;
+
+    --bg-dark: #020407;
+
+    --text-light: #070C17;
+
+    --text-dark: #F5F5F5;
+
+    --text-links: #6397CF;
+
+    --text-links-hover: #316FB4;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////// Colours /////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+a {
+    color: var(--text-links);
+}
+
+.backg-accent-light {
+
+    background-color: var(--bg-accent-light);
+}
+
+.backg-accent-dark {
+    background-color: var(--bg-accent-dark);
+    color           : var(--text-light);
+}
+
+.backg-accent {
+    background-color: var(--bg-accent);
+    color           : var(--text-light);
+}
+
+.backg-dark {
+    background-color: var(--bg-dark);
+    color           : var(--text-light);
+}
+
+.backg-darker {
+    background-color: var(--bg-dark);
+    color           : var(--text-light);
+}
+
+.text-dark {
+    color: var(--text-dark);
+}
 
 html {
-    scrollbar-width: thin;
-    scrollbar-color: #575757 #000000;
+    scrollbar-color: var(--text-light) var(--bg-dark);
 }
 
 body {
-    background-color: whitesmoke;
+    background-color: var(--bg-white);
+    color           : var(--text-dark);
+}
+
+.no-deco-links {
+    text-decoration: none;
+    color          : var(--text-dark) !important;
+
+    .no.deco-text {
+        text-decoration: none;
+        color          : var(--text-dark) !important;
+    }
+}
+
+.no-deco-links-light {
+    text-decoration: none;
+    color          : var(--text-light) !important;
+
+    .no.deco-text-light {
+        text-decoration: none;
+        color          : var(--text-light) !important;
+    }
 }
 
 .backg-header {
-    background-color: #5daffe;
+    background-color: var(--bg-accent-light);
 }
 
 .header-content {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #00000000;
+}
+
+.dropdown-menu {
+    color: var(--text-light);
+}
+
+.dropdown-item {
+    color: var(--text-light);
+}
+
+.textc-dark {
+    color: var(--text-dark);
+}
+
+.textc-light {
+    color: var(--text-light);
+}
+
+.textc-smallheader {
+    color: inherit;
+}
+
+.textc-blue {
+    color: var(--text-links-hover) !important;
+}
+
+footer {
+    color: var(--text-light) !important;
+
+    a {
+        color: var(--text-links);
+
+        :hover {
+            color: var(--text-links-hover);
+        }
+    }
+
+    p {
+        color: var(--text-light);
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////// Style //////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+html {
+    scrollbar-width: thin;
 }
 
 @supports (backdrop-filter: blur()) or (-webkit-backdrop-filter: blur()) {
     .header-content {
-        background-color       : rgba(255, 255, 255, 0.25) !important;
+        background-color       : #ffffff40 !important;
         width                  : 100% !important;
         height                 : 100% !important;
         border-radius          : 1em !important;
@@ -62,30 +183,10 @@ body {
     }
 }
 
-.backg-light {
-
-    background-color: #5daffe !important;
-}
-
-.backg-dark {
-    background-color: #182d8a;
-    color           : whitesmoke;
-}
-
-.backg-accent {
-    background-color: #1c62c4;
-    color           : whitesmoke;
-}
-
-.bg-dark {
-    color: whitesmoke
-}
-
 header {
     padding-top   : 4em;
     padding-bottom: 4em;
 }
-
 
 section {
     padding-top   : 0.5em;
@@ -119,65 +220,22 @@ section {
         margin-bottom: 0.25em;
     }
 
-    .no-deco-links {
-        text-decoration: none;
-        color          : rgb(36, 36, 36) !important;
 
-        .no.deco-text {
-            text-decoration: none;
-            color          : rgb(36, 36, 36) !important;
-        }
-    }
 }
 
 footer {
     padding-top   : 2.5em;
     padding-bottom: 2.5em;
-    color         : whitesmoke !important;
 
     a {
         text-decoration: none;
-        color          : #3583f8;
-
-        :hover {
-            color: #336bc0;
-        }
     }
-
-    p {
-        color: whitesmoke;
-    }
-}
-
-.dropdown-menu {
-    color: whitesmoke;
-}
-
-.dropdown-item {
-    color: whitesmoke;
-}
-
-.textc-dark {
-    color: rgb(36, 36, 36);
-}
-
-.textc-light {
-    color: whitesmoke;
-}
-
-.textc-smallheader {
-    color: inherit;
 }
 
 @supports (backdrop-filter: blur()) or (-webkit-backdrop-filter: blur()) {
     .textc-smallheader {
-        color: #2b8ae2 !important;
+        color: gray !important;
     }
-}
-
-.bg-darker {
-    background-color: rgb(36, 36, 36);
-    color           : whitesmoke;
 }
 
 .navbar-img {
@@ -247,6 +305,7 @@ footer {
     }
 }
 
+
 .aktuell-toggler {
     visibility: unset;
 }
@@ -266,4 +325,30 @@ footer {
     margin-right : 0em !important;
     margin-bottom: 0.5em !important;
     margin-left  : 0em !important;
+}
+
+.margin-small {
+    margin-top   : 0.5em !important;
+    margin-right : 0em !important;
+    margin-bottom: 0em !important;
+    margin-left  : 0em !important;
+}
+
+.margin-none {
+    margin-top   : 0em !important;
+    margin-right : 0em !important;
+    margin-bottom: 0em !important;
+    margin-left  : 0em !important;
+}
+
+.mainpage-liste {
+    background-color: #7878e180;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.padding-medium {
+    padding: 0.475em;
 }
